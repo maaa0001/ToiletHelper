@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="svg/Toiletpapir.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="svg/Toiletpapir.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animation.css" />
+    <title>Spil</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <input type="checkbox" id="nav-check" />
+        <div class="nav-header">
+          <div class="logo">
+            <a href="index.html">
+              <img src="svg/mr_toilet.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="nav-links">
+          <a href="spil.html">Spil</a>
+          <a href="grafik.html">Grafik</a>
+          <a href="assets.html">Assets</a>
+          <a href="teknik.html">Teknik</a>
+        </div>
+      </div>
+    </header>
+    <main class="spil">
+      <div id="screen">
+        <div id="game">
+          <div id="game_background"></div>
+
+          <div id="arm" class="arm_animation">
+            <div id="arm_sprite1"></div>
+          </div>
+
+          <div id="mand">
+            <div id="mand_sprite1"></div>
+          </div>
+
+          <div id="game_elements">
+            <div id="good_container1">
+              <div id="good_sprite1"></div>
+            </div>
+            <div id="good_container2">
+              <div id="good_sprite2"></div>
+            </div>
+            <div id="good_container3">
+              <div id="good_sprite3"></div>
+            </div>
+            <div id="bad_container1">
+              <div id="bad_sprite1"></div>
+            </div>
+            <div id="bad_container2">
+              <div id="bad_sprite2"></div>
+            </div>
+            <div id="mand"></div>
+          </div>
+          <div id="game_foreground"></div>
+          <div id="game_ui">
+            <div id="score_board">
+              <h1 id="point"></h1>
+            </div>
+            <div id="life_board">
+              <div id="liv1"></div>
+              <div id="liv2"></div>
+              <div id="liv3"></div>
+            </div>
+
+            <div id="time_board">
+              <div id="timeglas"></div>
+              <div id="sand"></div>
+            </div>
+          </div>
+        </div>
+        <div id="start">
+          <div id="start_knap"></div>
+        </div>
+        <div id="game_over">
+          <div id="game_over_points">Du fik ?? points</div>
+          <div id="genstart1"></div>
+        </div>
+        <div id="level_complete">
+          <div id="level_complete_points">Du fik ?? points</div>
+          <div id="genstart2"></div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <div id="sounds">
+      <audio src="sounds/AV1.mp3" id="AV1"></audio>
+      <audio src="sounds/AV2.mp3" id="AV2"></audio>
+
+      <audio src="sounds/Aaah.mp3" id="Aaah"></audio>
+
+      <audio src="sounds/black_box_fart.mp3" id="Bag_musik"></audio>
+      <audio src="sounds/fart.mp3" id="Fart"></audio>
+      <audio src="sounds/toilet_flush.mp3" id="Flush"></audio>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

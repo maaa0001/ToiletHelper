@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#screen {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+#start {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url(svg/Startskærm.svg);
+}
+#game_over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url(svg/Game_over.svg);
+}
+
+#game_over_points {
+  position: absolute;
+  text-align: center;
+  top: 23%;
+  font-size: 4cqw;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25em;
+}
+
+#level_complete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url(svg/Level_complete.svg);
+}
+
+#level_complete_points {
+  position: absolute;
+  text-align: center;
+  top: 23%;
+  font-size: 4cqw;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25em;
+}
+
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url(svg/baggrund_2.svg);
+}
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#game_foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url();
+  pointer-events: none;
+}
+
+#start_knap {
+  aspect-ratio: 278/107;
+  width: 20%;
+  position: absolute;
+  bottom: 3%;
+  left: 39%;
+  background-size: cover;
+  background-image: url(svg/Start.svg);
+  cursor: pointer;
+  animation-name: pulse_kf;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#genstart1,
+#genstart2 {
+  aspect-ratio: 278/107;
+  width: 20%;
+  position: absolute;
+  bottom: 7%;
+  left: 39%;
+  background-size: cover;
+  background-image: url(svg/Spil_igen.svg);
+  cursor: pointer;
+  animation-name: pulse_kf;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse_kf {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+/*------------------Game UI------------------*/
+
+#game_ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#game_ui h1 {
+  font-size: 4cqw;
+}
+
+/*---------Point---------*/
+#score_board {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  width: 5%;
+  aspect-ratio: 324/384;
+}
+
+/*---------Timeglas---------*/
+#time_board {
+  position: absolute;
+  top: 6%;
+  left: 19%;
+  width: 4%;
+  aspect-ratio: 197.5/363;
+}
+
+#timeglas {
+  position: absolute;
+  background-image: url(svg/Timeglas.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#sand {
+  position: absolute;
+  background-image: url(svg/Sand.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.timer {
+  animation-name: timer_kf;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes timer_kf {
+  0% {
+    clip-path: inset(0 0 0);
+  }
+  100% {
+    clip-path: inset(100% 0 0);
+  }
+}
+
+/*---------Liv---------*/
+#life_board {
+  position: absolute;
+  bottom: 67%;
+  left: 4%;
+  width: 25%;
+  display: flex;
+  gap: 2%;
+}
+
+#liv1,
+#liv2,
+#liv3 {
+  width: 25%;
+  aspect-ratio: 356/286.5;
+  background-image: url(svg/numse.svg);
+  background-size: cover;
+}
+#life_board img {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+/*---------Game elements---------*/
+#good_container1,
+#good_container2,
+#good_container3 {
+  width: 7%;
+  aspect-ratio: 324/384;
+  position: absolute;
+  top: -15%;
+}
+
+#good_sprite1,
+#good_sprite2,
+#good_sprite3 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(svg/Toiletpapir.svg);
+}
+
+#bad_container1,
+#bad_container2 {
+  width: 7%;
+  aspect-ratio: 324/384;
+  position: absolute;
+  top: -15%;
+}
+
+#bad_sprite1,
+#bad_sprite2 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(svg/Sandpapir.svg);
+}
+
+.pos1 {
+  left: 30%;
+}
+
+.pos2 {
+  left: 45%;
+}
+
+.pos3 {
+  left: 60%;
+}
+
+.pos4 {
+  left: 80%;
+}
+
+.pos5 {
+  left: 75%;
+}
+
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.5s;
+}
+
+.delay3 {
+  animation-delay: 1s;
+}
+
+.delay4 {
+  animation-delay: 1.5s;
+}
+
+.frys {
+  animation-play-state: paused;
+}
+
+.fald {
+  animation-name: fald_kf;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.speed1 {
+  animation-duration: 3s;
+}
+
+.speed2 {
+  animation-duration: 2.5s;
+}
+
+.speed3 {
+  animation-duration: 1.5s;
+}
+
+@keyframes fald_kf {
+  0% {
+    translate: 0 0;
+  }
+  100% {
+    translate: 0 800%;
+  }
+}
+
+.haha {
+  animation-name: haha_kf;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes haha_kf {
+  15% {
+    scale: 120%;
+  }
+
+  100% {
+    rotate: 720deg;
+    scale: 0%;
+  }
+}
+
+.forsvind {
+  animation-name: forsvind_kf;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes forsvind_kf {
+  50% {
+    scale: 150%;
+  }
+
+  100% {
+    scale: 0%;
+  }
+}
+
+/*---------Nøgen mand---------*/
+#mand {
+  width: 15%;
+  aspect-ratio: 1017/2767;
+  position: absolute;
+  left: 60%;
+  top: 24%;
+  pointer-events: none;
+}
+
+#mand_sprite1 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(svg/mand1.svg);
+}
+
+#arm {
+  width: 1.6%;
+  aspect-ratio: 128/543;
+  position: absolute;
+  left: 73.3%;
+  top: 23%;
+  transform-origin: bottom center;
+  rotate: -79deg;
+}
+
+#arm_sprite1 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(svg/arm1.svg);
+  pointer-events: none;
+}
+
+.arm_animation {
+  animation-name: min_kf;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes min_kf {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
